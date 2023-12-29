@@ -2,7 +2,9 @@
   :dependencies [[org.clojure/clojure "1.11.1"]
                  #_ [org.clojure/clojurescript "1.10.520"]
                  #_ [org.parkerici/blockoid "1.0.0"]
-                 [thheller/shadow-cljs "2.20.10"]]
+                 
+                 [thheller/shadow-cljs "2.20.10"]
+                 [com.google.javascript/closure-compiler-unshaded "v20220803"]]
 
   :min-lein-version "2.5.3"
 

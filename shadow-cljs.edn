@@ -10,5 +10,6 @@
   :lib {:target :npm-module
         :output-dir "target/npm"
         :exports {:blockoid "Blockoid"}
+        :entries [org.candelbio.blockoid.core]
         :compiler-options {:module-type 'commonjs}}}}
 

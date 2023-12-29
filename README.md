@@ -6,12 +6,13 @@ The combination of Blockly and Clojure allows for the easy creation of powerful 
 
 ![screenshot](doc/image1.png)
 
+## Status
+
+This branch is an attempt to move away from cljsjs pacakge managment to shadow-cljs. Not yet working!
 
 ## Usage
 
-Add to dependencies:
-
-    [org.parkerici/blockoid "0.3.5"] 
+This version is designed to be used with shadow-cljs and installed via npm.
 
 See [the example](example/project.clj) for details. 
 
@@ -19,22 +20,14 @@ In your code, add the `require`:
 
 ```clojure
 (ns ...
-  (:require [org.parkerici.blockoid.core :as blockoid]))
+  (:require ["blockoid" :as b]))
 ```
 
 Usage details are in (a separate document)[doc/blockoid.md].
 
-Blockoid loads Blockly via [a cljsjs package](https://github.com/cljsjs/packages/tree/master/blockly). If you need a newer version of Blockly, you will need to update cljsjs.
-
 ## License
 
 Relased under MIT license. See the [LICENSE](LICENSE.md) file for details.
-
-
-## Deploy to Clojars
-
-	x- run 'lein deploy clojars' in terminal (not emacs)
-- supply token (in password manager) for password when prompted
 
 ### One-time setup
 
@@ -61,6 +54,7 @@ I think npm pack might be worth trying
 ### Running example
 
     cd example
+	npm link blockoid
     shadow-cljs compile app
 	
 TODO can't get a compile to work	

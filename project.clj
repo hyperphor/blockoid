@@ -8,6 +8,7 @@
                  #_ [org.clojure/clojurescript "1.11.121"]
                  [re-frame "1.4.2"]
                  [thheller/shadow-cljs "2.20.10"] ;NOTE: going up to current version 2.22.10 causes a compile error "2.20.10"
+                 [com.google.javascript/closure-compiler-unshaded "v20220803"]
                  ]
   :deploy-repositories [["clojars" {:sign-releases false}]]
   :source-paths [ "src/cljs"]

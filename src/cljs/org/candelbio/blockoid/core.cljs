@@ -1,4 +1,4 @@
-(ns org.parkerici.blockoid.core
+(ns org.candelbio.blockoid.core
   (:require
    ["blockly" :as Blockly]
    #_ "blockly.blocks"
