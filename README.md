@@ -40,6 +40,8 @@ Relased under MIT license. See the [LICENSE](LICENSE.md) file for details.
 
     shadow-cljs compile lib
 
+This writes results in target/blockoid.js and target/blockoid
+
 ### Installing for local use
 
     npm link
