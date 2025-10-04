@@ -3,6 +3,9 @@
   <head>
     <title>Blockoid demo</title>
     <meta charset='utf-8'>
+    <script src="https://unpkg.com/blockly@12/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@12/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@12/msg/en.js"></script>
   </head>
   <body>
     <table>
@@ -17,9 +20,9 @@
     </table>
     <div id="app">
     </div>
-    <script src="js/compiled/app.js"></script>
+    <script src="cljs-out/dev-main.js"></script>
   </body>
-  <script>org.parkerici.blockoid_example.core.initialize(); </script>
+  <script>org.candelbio.blockoid_example.core.initialize(); </script>
 
 </html>
 

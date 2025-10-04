@@ -58,7 +58,8 @@
           (set! (.-top (.-style blockly-div)) (str y "px"))
           (set! (.-width (.-style blockly-div)) (str (.-offsetWidth blockly-area) "px"))
           (set! (.-height (.-style blockly-div)) (str (.-offsetHeight blockly-area) "px"))
-          (.svgResize js/Blockly @workspace))))))
+          ;; TODO API has changed? This gets errors
+          #_ (.svgResize js/Blockly @workspace))))))
 
 (defn auto-resize-workspace
   ;; TODO ugly, make it an option to define-workspace

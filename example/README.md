@@ -1,5 +1,7 @@
 #  To run
 
-    lein figwheel
+    npm install
+    shadow-cljs compile app
+    open resources/public/index.html
 
-Then open a browser at http://localhost:3457
+

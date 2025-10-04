@@ -2,12 +2,7 @@
 {:lein true                             ;dependencies from lein project.clj
  ;; :deps true
  :builds
- {#_ :app #_ {:target :browser
-        :compiler-options {:infer-externs true
-                           }
-        :output-dir "resources/public/cljs-out"
-        :asset-path "/cljs-out"         ;webserver path
-              :modules {:dev-main {:entries [org.parkerici.blockoid.example.core]}}}
+ {
   :lib {:target :esm
         :output-to "target/blockoid.js"
         :output-dir "target/blockoid"                             ;supporting files

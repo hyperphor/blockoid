@@ -1,5 +1,5 @@
 (ns org.candelbio.blockoid-example.core
-  (:require ["blockoid" :as bo]
+  (:require [org.candelbio.blockoid.core :as bo]
             [clojure.pprint :as pprint]
             ;; Include the english strings (you can substitute your language of choice)
             #_ cljsjs.blockly.msg.en))      

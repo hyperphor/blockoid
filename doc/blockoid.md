@@ -8,13 +8,13 @@ Blockoid allows you to combine the block UI paradigm with a powerful symbol mani
 
 Add to dependencies:
 
-    [org.parkerici/blockoid "0.0.2"] 
+    [org.candelbio/blockoid "1.0.1"] 
 
 In your code, add the `require`:
 
 ```clojure
 (ns ...
-  (:require [org.parkerici.blockoid.core :as blockoid]))
+  (:require [org.candelbio.blockoid.core :as blockoid]))
 ```
 
 ### Initializing  a Blockly workspace
@@ -32,7 +32,7 @@ Blockly toolboxes are [defined in XML](https://developers.google.com/blockly/gui
 
 `[:toolbox <contents>]`: This is the outer element. 
 `[:category <name> <props> <contents>]`: Defines a category. <props> is a map of attributes as defined by Blockly (eg {`:colour “blue”}`) .
-	`[:block <name> <props> <subs>]`: Defines a block. <props> is a map of attributes as defined by Blockly. <subs> is zero or more `:field` or `:value` specifications
+`[:block <name> <props> <subs>]`: Defines a block. <props> is a map of attributes as defined by Blockly. <subs> is zero or more `:field` or `:value` specifications
 `[:field <name> <value>]`: Defines a value for a named field of a block
 `[:value <name> <subs>]`: Define an inner block for a named field of the outer block.  
 `[:next <block>]`: Define a block to fit into the next field of the outer block.

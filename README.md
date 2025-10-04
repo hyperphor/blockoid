@@ -6,13 +6,13 @@ The combination of Blockly and Clojure allows for the easy creation of powerful 
 
 ![screenshot](doc/image1.png)
 
-## Status
-
-This branch is an attempt to move away from cljsjs pacakge managment to shadow-cljs. Not yet working!
-
 ## Usage
 
-This version is designed to be used with shadow-cljs and installed via npm.
+NOTE: I can't get the shadow-cljs include to work proeprly, so you also have to load blockly separately. Add these lines to your HTML frame:
+
+    <script src="https://unpkg.com/blockly@12/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@12/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@12/msg/en.js"></script>
 
 See [the example](example/project.clj) for details. 
 

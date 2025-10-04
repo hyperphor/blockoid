@@ -1,10 +1,11 @@
 (defproject blockoid-example "1.0.0"
-  :dependencies [[org.clojure/clojure "1.11.1"]
-                 #_ [org.clojure/clojurescript "1.10.520"]
-                 #_ [org.parkerici/blockoid "1.0.0"]
-                 
-                 [thheller/shadow-cljs "2.20.10"]
-                 [com.google.javascript/closure-compiler-unshaded "v20220803"]]
+  :dependencies [
+                 [org.candelbio/blockoid "1.0.1"]
+                 [thheller/shadow-cljs  "3.2.1"]
+                 [org.clojure/clojure "1.12.0"]
+                 [org.clojure/clojurescript "1.12.42"]
+                 [com.google.javascript/closure-compiler-unshaded "LATEST"]
+                 ]
 
   :min-lein-version "2.5.3"
 
@@ -18,4 +19,4 @@
                    ]
     :plugins      []}
    }
-)
+  )
