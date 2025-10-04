@@ -8,7 +8,7 @@ The combination of Blockly and Clojure allows for the easy creation of powerful 
 
 ## Usage
 
-Usage details are in (a separate document)[doc/blockoid.md].
+Usage details are in [a separate document](doc/blockoid.md).
 
 See also [the example](example) . 
 
@@ -22,6 +22,6 @@ Relased under MIT license. See the [LICENSE](LICENSE.md) file for details.
 	
 ### Running example
 
-See (example/README.md)[example]
+See [example](example/README.md)
 	
 
