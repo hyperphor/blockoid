@@ -1,7 +1,6 @@
-(ns org.parkerici.blockoid.core
+(ns org.candelbio.blockoid.core
   (:require
-   cljsjs.blockly
-   cljsjs.blockly.blocks
+   ["blockly" :as Blockly]
    [re-frame.core :as rf]
    [clojure.data.xml :as xml]))
 
@@ -22,7 +21,7 @@
  change-handler: a fn of one argument (event) that gets called on any changes to the workspace. "
   [div toolbox-xml options change-handler]
   (reset! workspace            ;; see options: https://developers.google.com/blockly/guides/get-started/web#configuration
-          (.inject js/Blockly div (clj->js (merge {:toolbox (xml/emit-str toolbox-xml)} options))))
+          (Blockly/inject div (clj->js (merge {:toolbox (xml/emit-str toolbox-xml)} options))))
   (reset! blockly-div div)
   ;; Add button handlers
   (doseq [[ckey handler] @callback-keys]
@@ -58,7 +57,8 @@
           (set! (.-top (.-style blockly-div)) (str y "px"))
           (set! (.-width (.-style blockly-div)) (str (.-offsetWidth blockly-area) "px"))
           (set! (.-height (.-style blockly-div)) (str (.-offsetHeight blockly-area) "px"))
-          (.svgResize js/Blockly @workspace))))))
+          ;; TODO untested in shadow-cljs world
+          (Blockly/svgResize @workspace))))))
 
 (defn auto-resize-workspace
   ;; TODO ugly, make it an option to define-workspace
@@ -150,7 +150,7 @@
 (defn define-blocks
   "Define new block types. Blockdefs is a seq of maps that are converted to JSON as per https://developers.google.com/blockly/guides/configure/web/custom-blocks"
   [blockdefs]
-  (.defineBlocksWithJsonArray js/Blockly (clj->js blockdefs)))
+  (Blockly/defineBlocksWithJsonArray (clj->js blockdefs)))
 
 ;;; ⊓⊔⊓⊔ Toolbox ⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔⊓⊔
 ;;; The toolbox method converts an EDN language into the XML required by Blockly to define the toolbox

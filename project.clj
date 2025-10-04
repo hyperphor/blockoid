@@ -1,15 +1,15 @@
-(defproject org.parkerici/blockoid "0.3.10"
+(defproject org.candelbio/blockoid "1.0.1"
   :description "Clojurescript shim for Blockly"
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
-  :url "http://github.com/ParkerICI/blockoid"
-  :dependencies [[org.clojure/clojure "1.10.1"]
+  :url "http://github.com/candelbio/blockoid"
+  :dependencies [[org.clojure/clojure "1.11.1"]
                  [org.clojure/data.xml "0.2.0-alpha6"]
-                 [org.clojure/clojurescript "1.10.520"]
-                 [re-frame "0.10.9"]
-                 [cljsjs/blockly "5.20210325.1-0"]]
-
-  :plugins [[lein-cljsbuild "1.1.7"]]
+                 #_ [org.clojure/clojurescript "1.11.121"]
+                 [re-frame "1.4.2"]
+                 [thheller/shadow-cljs "2.20.10"] ;NOTE: going up to current version 2.22.10 causes a compile error "2.20.10"
+                 [com.google.javascript/closure-compiler-unshaded "v20220803"]
+                 ]
   :deploy-repositories [["clojars" {:sign-releases false}]]
   :source-paths [ "src/cljs"]
   :test-paths [ "test/cljs"]

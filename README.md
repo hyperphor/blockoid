@@ -6,32 +6,22 @@ The combination of Blockly and Clojure allows for the easy creation of powerful 
 
 ![screenshot](doc/image1.png)
 
-
 ## Usage
-
-Add to dependencies:
-
-    [org.parkerici/blockoid "0.3.5"] 
-
-See [the example](example/project.clj) for details. 
-
-In your code, add the `require`:
-
-```clojure
-(ns ...
-  (:require [org.parkerici.blockoid.core :as blockoid]))
-```
 
 Usage details are in (a separate document)[doc/blockoid.md].
 
-Blockoid loads Blockly via [a cljsjs package](https://github.com/cljsjs/packages/tree/master/blockly). If you need a newer version of Blockly, you will need to update cljsjs.
+See also [the example](example) . 
 
 ## License
 
 Relased under MIT license. See the [LICENSE](LICENSE.md) file for details.
 
+### Installing for local use
 
-## Deploy to Clojars
+    lein install
+	
+### Running example
 
-	x- run 'lein deploy clojars' in terminal (not emacs)
-- supply token (in password manager) for password when prompted
+See (example/README.md)[example]
+	
+

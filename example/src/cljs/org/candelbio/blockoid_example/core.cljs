@@ -1,8 +1,8 @@
-(ns org.parkerici.blockoid-example.core
-  (:require [org.parkerici.blockoid.core :as bo]
+(ns org.candelbio.blockoid-example.core
+  (:require [org.candelbio.blockoid.core :as bo]
             [clojure.pprint :as pprint]
             ;; Include the english strings (you can substitute your language of choice)
-            cljsjs.blockly.msg.en))      
+            #_ cljsjs.blockly.msg.en))      
 
 ;;; TODO: have different demos; this stuff is currently unused
 

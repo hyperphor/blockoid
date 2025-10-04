@@ -1,0 +1,21 @@
+{
+    "name": "blockoid-example",
+    "version": "1.0.0",
+    "description": "lein figwheel",
+    "main": "index.js",
+    "dependencies": {
+	
+	"blockly": "^12.3.1",
+	"react": "16.8.6",
+	"react-dom": "16.8.6"
+
+    },
+    "devDependencies": {
+        "shadow-cljs": "^3.2.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Mike Travers",
+    "license": "ISC"
+}
