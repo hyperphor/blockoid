@@ -10,6 +10,12 @@ Add to dependencies:
 
     [org.candelbio/blockoid "1.0.1"] 
 
+NOTE: I can't get the shadow-cljs include to work proeprly, so you also have to load blockly separately. Add these lines to your HTML frame:
+
+    <script src="https://unpkg.com/blockly@12/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@12/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@12/msg/en.js"></script>
+
 In your code, add the `require`:
 
 ```clojure

@@ -1,7 +1,6 @@
 (ns org.candelbio.blockoid.core
   (:require
    ["blockly" :as Blockly]
-   #_ "blockly.blocks"
    [re-frame.core :as rf]
    [clojure.data.xml :as xml]))
 
@@ -58,8 +57,8 @@
           (set! (.-top (.-style blockly-div)) (str y "px"))
           (set! (.-width (.-style blockly-div)) (str (.-offsetWidth blockly-area) "px"))
           (set! (.-height (.-style blockly-div)) (str (.-offsetHeight blockly-area) "px"))
-          ;; TODO API has changed? This gets errors
-          #_ (.svgResize js/Blockly @workspace))))))
+          ;; TODO untested in shadow-cljs world
+          (Blockly/svgResize @workspace))))))
 
 (defn auto-resize-workspace
   ;; TODO ugly, make it an option to define-workspace
